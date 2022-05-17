@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: php-container
+    build:
+      dockerfile: DOCKERFILE
+    restart: always
+    ports:
+    - 85:80
+    networks:
+    - curso
+
+networks:
+  curso:
+    driver: "bridge"
